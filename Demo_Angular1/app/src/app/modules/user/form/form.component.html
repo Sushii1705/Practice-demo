@@ -1,35 +1,35 @@
-<form [formGroup]="userForm" (ngSubmit)="addUser()">
+<form [formGroup]="userForm" (ngSubmit)="saveUserData()">
     <div>
         <label for="first-name" class="form-label w-25 me-3">First Name:</label>
         <div>
-            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            <input type="text" formControlName="firstname"  class="form-control" id="firstName" placeholder="First Name">
         </div>
 
     </div>
     <div>
         <label for="last-name" class="form-label w-25 me-3">Last Name:</label>
         <div>
-            <input type="text" class="form-control" id="lastName" placeholder="last Name">
+            <input type="text" formControlName="lastname" class="form-control" id="lastName" placeholder="last Name">
         </div>
     </div>
     <div>
         <label for="email" class="form-label w-25 me-3">E-Mail:</label>
         <div>
-            <input type="email" class="form-control" id="email" placeholder="sushil@gmail.com">
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="sushil@gmail.com">
         </div>
     </div>
     <div>
         <label for="M.no" class="form-label w-25 me-3">Mobile No:</label>
         <div>
-            <input type="text" class="form-control" id="number">
+            <input type="text" formControlName="number"  class="form-control" id="number">
         </div>
     </div>
     <div>
         <label for="Gender" class="form-label w-25 me-3">Gender:</label>
         <div>
-            <input type="radio" id="Male" name="male" value="Male"> 
+            <input formControlName="gender" type="radio" id="Male" name="male" value="Male"> 
             <label for="male">M</label>
-            <input type="radio" id="Female" name="female" value="Female">
+            <input formControlName="gender" type="radio" id="Female" name="female" value="Female">
             <label for="female">F</label>
         </div>
     </div>
@@ -41,6 +41,7 @@
     </div>
     <div>
         <button type="submit">submit</button>
+        <button type="button"  (click)="resetForm()">Reset</button>
     </div>
 
 </form>

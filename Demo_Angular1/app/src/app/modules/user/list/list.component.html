@@ -1,11 +1,24 @@
-<table>
-    <tr>
-        <th>FirstName</th>
-        <th>Lastname</th>
-        <th>Email</th>
-        <th>Mobile.no</th>
-        <th>Gender</th>
-        <th>Date of Employment</th>
-        <!-- <th></th> -->
-    </tr>
-</table>
+
+    <table class="list">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Mobile.no</th>
+                <th>Gender</th>
+                <!-- <th>Date of Employment</th> -->
+                <!-- <th></th> -->
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let item of userdata">
+                <td>{{item.firstname}}</td>
+                <td>{{item.lastname}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.number}}</td>
+                <td>{{item.gender}}</td>
+            </tr>
+        </tbody>
+    </table>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Data } from '@angular/router';
-import { UserService } from '../user.service';
+import { Data, Router } from '@angular/router';
+import { userdata } from '../models/user.model';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-form',
@@ -11,7 +12,7 @@ import { UserService } from '../user.service';
 export class FormComponent implements OnInit {
   userForm={} as FormGroup;
 
-  constructor(private fb:FormBuilder,private userService:UserService) { 
+  constructor(private fb:FormBuilder,private userService:UserService, private route: Router) { 
     
   }
 
@@ -21,19 +22,24 @@ export class FormComponent implements OnInit {
   }
   genrateForm(){
      return this.fb.group({
-      firstName: ['',Validators.required],
-      lastName: ['',Validators.required],
+      firstname: ['',Validators.required],
+      lastname: ['',Validators.required],
       email: [,Validators.required],
-      number: [null,[Validators.required,Validators.min(10)]],
-      Male: [true,Validators.required],
-      Female: [true,Validators.required],
-      
+      number: ['',[Validators.required,Validators.min(10)]],
+      gender: ['']
     });
   }
-  addUser(){
-    
-     this.userService.creatUser;
+  saveUserData(){  
+    this.userService.addUser(this.userForm.value).subscribe((res:userdata) =>{
+      alert('data has been uploded');
+    });
+    this.route.navigate(['/user/user-list'])
+  }
+  resetForm(){
+    this.userForm.reset();
   }
 
+
+  
 
 }
