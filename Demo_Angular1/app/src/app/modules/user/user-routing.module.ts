@@ -13,6 +13,7 @@ const routes: Routes = [
         {path :'', component:ListComponent},
         {path :'user-form', component:FormComponent},
         {path :'user-list', component:ListComponent},
+        {path :'edit/:id', component:FormComponent},
       ]
   }
 ];

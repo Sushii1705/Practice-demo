@@ -1,5 +1,5 @@
-
-    <table class="list">
+<div class="list">
+    <table>
         <thead>
             <tr>
                 <th>FirstName</th>
@@ -19,6 +19,12 @@
                 <td>{{item.email}}</td>
                 <td>{{item.number}}</td>
                 <td>{{item.gender}}</td>
+                <td>
+                    <button type="button" (click)="editUser(item.id)">Edit</button>
+                    <button type="button" (click)="deleteuser(item.id)">Delete</button>
+                </td>
             </tr>
         </tbody>
     </table>
+</div>
+    

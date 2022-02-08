@@ -1,12 +1,13 @@
 {
   "userdata": [
     {
-      "firstname": "viral",
-      "lastname": "patel",
-      "email": "kahoisha@gmail.com",
-      "number": "646436413446",
-      "gender": "",
-      "id": 1
+      "id": 2,
+      "firstname": null,
+      "lastname": null,
+      "email": null,
+      "number": null,
+      "date": null,
+      "gender": null
     }
   ]
 }

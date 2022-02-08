@@ -1,4 +1,16 @@
-.main{
+/* .main{
     display: flex;
     justify-content: center;
+} */
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.wrapper, .main{
+    
+    
+}
+.sidenav {
+    width: 300px;
+
 }

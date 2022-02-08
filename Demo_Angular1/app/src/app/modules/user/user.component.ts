@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
   }
   changebutton(){
     // this.twist=!this.twist
-    debugger
+    
     if(this.twist){
       this.twist=false
       this.buttonchange = 'Add user'

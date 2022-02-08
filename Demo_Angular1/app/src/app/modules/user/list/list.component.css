@@ -1,4 +1,4 @@
-.list{
-    border-collapse: collapse;
-    border: 1px solid black;
+.list,th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
