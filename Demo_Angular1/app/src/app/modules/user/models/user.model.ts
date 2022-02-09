@@ -10,6 +10,7 @@ export interface userdata{
     lastname:string,
     email:EmailValidator,
     number:number,
-    gender:RadioControlValueAccessor
+    gender:RadioControlValueAccessor,
+    department:string
 
 }

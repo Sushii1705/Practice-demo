@@ -1,4 +1,6 @@
-<form [formGroup]="userForm" (ngSubmit)="saveUserData()">
+<section class="form-section">
+<form class="form-content" [formGroup]="userForm" (ngSubmit)="saveUserData()">
+    <fieldset class="form-area">
     <div>
         <label for="first-name" class="form-label w-25 me-3">First Name:</label>
         <div>
@@ -20,7 +22,7 @@
         </div>
     </div>
     <div>
-        <label for="email" class="form-label w-25 me-3">E-Mail:</label>
+        <label for="number" class="form-label w-25 me-3">E-Mail:</label>
         <div>
             <input formControlName="email" type="email"  class="form-control" id="email" placeholder="sushil@gmail.com">
             <div class="error" *ngIf="getvalue['email'].dirty || getvalue['email'].touched && getvalue['email'].invalid">
@@ -32,6 +34,9 @@
         <label for="M.no" class="form-label w-25 me-3">Mobile No:</label>
         <div>
             <input type="text" formControlName="number"  class="form-control" id="number">
+            <div class="error" *ngIf="getvalue['number'].dirty || getvalue['number'].touched && getvalue['number'].invalid">
+                <div *ngIf="getvalue['number'].errors && getvalue['number'].errors['required'] ">number Required</div>
+            </div>
         </div>
     </div>
     <div>
@@ -62,8 +67,10 @@
         </div>
     </div>
     <div>
-        <button type="submit" [disabled]="!userForm.valid" >submit</button>
-        <button type="button"  (click)="resetForm()">Reset</button>
+        <button type="submit" [disabled]="userForm.invalid">submit</button>
+        <button type="button"(click)="resetForm()">Reset</button>
     </div>
+</fieldset>
 
 </form>
+</section>

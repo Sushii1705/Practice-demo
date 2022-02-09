@@ -1,0 +1,11 @@
+.user-btn{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+.search-btn {
+    padding: 2px 23px;
+    margin: 0px 10px;
+
+}

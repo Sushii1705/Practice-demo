@@ -2,3 +2,20 @@
   border: 1px solid black;
   border-collapse: collapse;
 }
+.list {
+  width: 503px;
+  margin: auto;
+}
+.btn-btn-primary {
+  padding: 1px 10px;
+  color: white;
+  background-color: #414141;
+}
+.btn-btn-sucsses{
+  padding: 1px 2px;
+  color: white;
+  background-color: #414141;
+
+
+}
+

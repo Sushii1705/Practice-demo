@@ -39,7 +39,8 @@ export class FormComponent implements OnInit {
       email: ['',[Validators.email, Validators.required]],
       number: ['',[Validators.required,Validators.min(10)]],
       date:[null],
-      gender: ['']
+      gender: [''],
+      department: ['']
     });
   }
   get getvalue(){

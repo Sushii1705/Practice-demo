@@ -3,7 +3,17 @@
     
     cursor: pointer;
     text-decoration: none;
+    color: white;
 }
 .side-bar li {
     list-style: none;
 } 
+.side-main {
+    display: flex;
+    justify-content: center;
+
+}
+.section-sidebar {
+    line-height: 1.6;
+    font-size: 20px;
+}

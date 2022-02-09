@@ -1,13 +1,41 @@
 {
   "userdata": [
     {
-      "id": 2,
-      "firstname": null,
-      "lastname": null,
-      "email": null,
-      "number": null,
+      "id": 1,
+      "firstname": "sushil1",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "1234567890",
+      "date": "2022-03-02",
+      "gender": "Male"
+    },
+    {
+      "firstname": "sushil",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "646436413446",
+      "date": "2022-02-18",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "firstname": "sushil1",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "1234567890",
       "date": null,
-      "gender": null
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "firstname": "sushil1",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "646436413446",
+      "date": "2022-02-18",
+      "gender": "Male",
+      "department": "",
+      "id": 4
     }
   ]
 }
