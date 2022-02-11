@@ -20,6 +20,12 @@
                 <label for="designation">Designation:</label>
                 <input type="text" formControlName="designation" id="designation"
                     placeholder="Enter current Designation">
+                <div class="error"
+                    *ngIf="getvalue['designation'].dirty || getvalue['designation'].touched && getvalue['designation'].invalid">
+                    <div *ngIf="getvalue['designation'].errors && getvalue['designation'].errors['required']">
+                        designation Required</div>
+
+                </div>
             </div>
             <div>
                 <label for="email">Email:</label>
@@ -41,10 +47,10 @@
             <div formArrayName="skills" *ngFor="let m of formarrayfunc('skills').controls, let i=index">
                 <div [formGroupName]="i">
                     <input type="text" id="skills" formControlName='skillname'>
-                    <button (click)="removeskills(i)"> Delete</button>
+                    <button type="button" (click)="removeskills(i)"> Delete</button>
                 </div>
             </div>
-            <button (click)="addskills()"> Add </button>
+            <button type="button" (click)="addskills()"> Add </button>
             <div>
                 <label for="technical">Technical:</label>
                 <input type="text" id="technical">
@@ -59,7 +65,7 @@
                 <input type="text" id="education">
             </div>
             <div>
-                <button type="submit">Submit </button>
+                <button class="btn-btn-success" type="submit">Submit </button>
             </div>
         </fieldset>
     </form>

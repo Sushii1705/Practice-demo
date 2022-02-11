@@ -41,8 +41,8 @@ export class ResumeFormComponent implements OnInit {
       mobileno: [, [Validators.required, Validators.min(10)]],
       profile: ['', Validators.required],
       skills: this.fb.array([]),
-      // technical:this.fb.array([]),
-      // experience:this.fb.array([]),
+      technical: this.fb.array([]),
+      experience: this.fb.array([]),
     });
   }
 
@@ -61,22 +61,16 @@ export class ResumeFormComponent implements OnInit {
     return this.resumeform['controls'];
   }
 
-  // saveresumedata(){
-
-  //   this.resumeservice.addresumedata(this.resumeform.value).subscribe(res=>{
-  //     alert('data add successfull');
-  //   },(error=>{
-  //     alert('data not post');
-  //   }));
-  // }
-
   saveresumedata() {
     console.log(this.resumeform);
     if (this.resumeform.status === 'VALID') {
-      this.resumeservice
+      this.resumeservice.deletedata(1).subscribe(() => {
+        this.resumeservice
         .addresumedata(this.resumeform.value)
         .subscribe((res: Resumedata) => {
           alert('data uploaded');
+
+      })   
         });
       this.route.navigate(['/resume/resume-view']);
     } else {

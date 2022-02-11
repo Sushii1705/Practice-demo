@@ -1,4 +1,6 @@
-.list,th,td {
+.list,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -9,13 +11,13 @@
 .btn-btn-primary {
   padding: 1px 10px;
   color: white;
-  background-color: #414141;
+  background-color: #313131;
 }
-.btn-btn-sucsses{
+.btn-btn-sucsses {
   padding: 1px 2px;
   color: white;
-  background-color: #414141;
-
-
+  background-color: #df4040;
 }
-
+.list table {
+  background-color: gainsboro;
+}

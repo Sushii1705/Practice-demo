@@ -1,76 +1,85 @@
 <section class="form-section">
-<form class="form-content" [formGroup]="userForm" (ngSubmit)="saveUserData()">
-    <fieldset class="form-area">
-    <div>
-        <label for="first-name" class="form-label w-25 me-3">First Name:</label>
-        <div>
-            <input type="text" formControlName="firstname"  class="form-control" id="firstname" placeholder="First Name">
-            <div class="error" *ngIf="getvalue['firstname'].dirty || getvalue['firstname'].touched && getvalue['firstname'].invalid">
-                <div *ngIf="getvalue['firstname'].errors && getvalue['firstname'].errors['required']">Firstname Required</div>
+    <form class="form-content" [formGroup]="userForm" (ngSubmit)="saveUserData()">
+        <fieldset class="form-area">
+            <div>
+                <label for="first-name" class="form-label w-25 me-3">First Name:</label>
+                <div>
+                    <input type="text" formControlName="firstname" class="form-control" id="firstname"
+                        placeholder="First Name">
+                    <div class="error"
+                        *ngIf="getvalue['firstname'].dirty || getvalue['firstname'].touched && getvalue['firstname'].invalid">
+                        <div *ngIf="getvalue['firstname'].errors && getvalue['firstname'].errors['required']">Firstname
+                            Required</div>
+
+                    </div>
+                </div>
 
             </div>
-        </div>
+            <div>
+                <label for="last-name" class="form-label w-25 me-3">Last Name:</label>
+                <div>
+                    <input formControlName="lastname" type="text" class="form-control" id="lastname"
+                        placeholder="last Name">
+                    <div class="error"
+                        *ngIf="getvalue['lastname'].dirty || getvalue['lastname'].touched && getvalue['lastname'].invalid">
+                        <div *ngIf="getvalue['lastname'].errors && getvalue['lastname'].errors['required'] ">Lastname
+                            Required</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="number" class="form-label w-25 me-3">E-Mail:</label>
+                <div>
+                    <input formControlName="email" type="email" class="form-control" id="email"
+                        placeholder="sushil@gmail.com">
+                    <div class="error"
+                        *ngIf="getvalue['email'].dirty || getvalue['email'].touched && getvalue['email'].invalid">
+                        <div *ngIf="getvalue['email'].errors && getvalue['email'].errors['required'] ">email Required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="M.no" class="form-label w-25 me-3">Mobile No:</label>
+                <div>
+                    <input type="text" formControlName="number" class="form-control" id="number">
+                    <div class="error"
+                        *ngIf="getvalue['number'].dirty || getvalue['number'].touched && getvalue['number'].invalid">
+                        <div *ngIf="getvalue['number'].errors && getvalue['number'].errors['required'] ">number Required
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="Gender" class="form-label w-25 me-3">Gender:</label>
+                <div>
+                    <input formControlName="gender" type="radio" id="Male" value="Male">
+                    <label for="male"> Male </label>
+                    <input formControlName="gender" type="radio" id="Female" value="Female">
+                    <label for="female"> Female </label>
+                </div>
+            </div>
+            <div>
+                <label for="Date-of-Employment" class="form-label w-25 me-3">Date-of-Employment:</label>
+                <div>
+                    <input type="date" formControlName="date" class="form-control" id="date">
+                </div>
+            </div>
+            <div>
+                <label for="Department">Department</label>
+                <div>
+                    <select formControlName="departments" id="department">
+                        <option value="0">select</option>
+                        <option *ngFor="let department of userdept;let i=index" [value]="i">{{department.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="submit" [disabled]="userForm.invalid">submit</button>
+                <button type="button" (click)="resetForm()">Reset</button>
+            </div>
+            <!-- {{userdept | json}} -->
+        </fieldset>
 
-    </div>
-    <div>
-        <label for="last-name" class="form-label w-25 me-3">Last Name:</label>
-        <div>
-            <input formControlName="lastname" type="text"  class="form-control" id="lastname" placeholder="last Name">
-            <div class="error" *ngIf="getvalue['lastname'].dirty || getvalue['lastname'].touched && getvalue['lastname'].invalid">
-                <div *ngIf="getvalue['lastname'].errors && getvalue['lastname'].errors['required'] ">Lastname Required</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <label for="number" class="form-label w-25 me-3">E-Mail:</label>
-        <div>
-            <input formControlName="email" type="email"  class="form-control" id="email" placeholder="sushil@gmail.com">
-            <div class="error" *ngIf="getvalue['email'].dirty || getvalue['email'].touched && getvalue['email'].invalid">
-                <div *ngIf="getvalue['email'].errors && getvalue['email'].errors['required'] ">email Required</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <label for="M.no" class="form-label w-25 me-3">Mobile No:</label>
-        <div>
-            <input type="text" formControlName="number"  class="form-control" id="number">
-            <div class="error" *ngIf="getvalue['number'].dirty || getvalue['number'].touched && getvalue['number'].invalid">
-                <div *ngIf="getvalue['number'].errors && getvalue['number'].errors['required'] ">number Required</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <label for="Gender" class="form-label w-25 me-3">Gender:</label>
-        <div>
-            <input formControlName="gender" type="radio" id="Male" value="Male"> 
-            <label for="male">M</label>
-            <input formControlName="gender" type="radio" id="Female"  value="Female">
-            <label for="female">F</label>
-        </div>
-    </div>
-    <div>
-        <label for="Date-of-Employment" class="form-label w-25 me-3">Date-of-Employment:</label>
-        <div>
-            <input type="date" formControlName="date" class="form-control" id="date">
-        </div>
-    </div>
-    <div>
-        <label for="Department">Department</label>
-        <div>
-            <select name="department" id="department">
-                <option value=""></option>
-                <option value="ui">UI</option>
-                <option value="angular">Angular</option>
-                <option value="viewjs">Viewjs</option>
-                <option value="react">React</option>
-            </select>
-        </div>
-    </div>
-    <div>
-        <button type="submit" [disabled]="userForm.invalid">submit</button>
-        <button type="button"(click)="resetForm()">Reset</button>
-    </div>
-</fieldset>
-
-</form>
+    </form>
 </section>

@@ -31,4 +31,7 @@ export class ListComponent implements OnInit {
       this.getData();   
     });
   }
+  getdeptdata(){
+    
+  }
 }

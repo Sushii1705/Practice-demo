@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { userdata } from '../models/user.model';
+import { Department, userdata } from '../models/user.model';
      
 @Injectable({
   providedIn: 'root'
@@ -27,5 +27,8 @@ export class UserService {
   }
   deleteuser(id: number):Observable<userdata[]> {
     return this.httpRequest.delete<userdata[]>(`${this.requestUrl}/userdata/${id}`);
+  }
+  getdepartmentlist(): Observable<Department[]> {
+    return this.httpRequest.get<Department[]>(`${this.requestUrl}/departments`)
   }
 }

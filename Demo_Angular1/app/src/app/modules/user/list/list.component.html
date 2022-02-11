@@ -7,19 +7,22 @@
                 <th>Email</th>
                 <th>Mobile.no</th>
                 <th>Gender</th>
-                <!-- <th>Date of Employment</th> -->
-                <!-- <th></th> -->
+                <!-- <th>Joining Date</th> -->
+                <th>Department</th>
+                <th>Action</th>
             </tr>
         </thead>
 
         <tbody>
             <tr *ngFor="let item of userdata">
+                <!-- <pre>{{item | json}}</pre> -->
                 <td>{{item.firstname}}</td>
                 <td>{{item.lastname}}</td>
                 <td>{{item.email}}</td>
                 <td>{{item.number}}</td>
                 <td>{{item.gender}}</td>
-                <td>{{item.department}}</td>
+                <!-- <td>{{item.}}</td> -->
+                <!-- <td>{{item.departments | depart: departs}}</td> -->
                 <td>
                     <button class="btn-btn-primary" type="button" (click)="editUser(item.id)">Edit</button>
                     <button class="btn-btn-sucsses" type="button" (click)="deleteuser(item.id)">Delete</button>

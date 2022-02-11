@@ -1,9 +1,6 @@
 import { EmailValidator, RadioControlValueAccessor } from "@angular/forms";
 
-export interface Department{
-    id: number,
-    name: string
-}
+
 export interface userdata{
     id: number,
     firstname:string,
@@ -11,6 +8,12 @@ export interface userdata{
     email:EmailValidator,
     number:number,
     gender:RadioControlValueAccessor,
-    department:string
+    departments:number
 
+    
+
+}
+ export interface Department{
+    id: number,
+    name: string
 }

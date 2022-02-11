@@ -5,7 +5,7 @@
 .form-content {
   line-height: 1.5;
   font-size: 20px;
-  background-color: #adb5bd;
+  background-color: #e3e2de
 }
 .form-area {
   padding: 2rem;
@@ -16,4 +16,12 @@
     font-size: 20px;
     padding: 1rem;
     color: #313131;
+}
+.btn-btn-success {
+  background-color: darkgreen;
+  color: white;
+  padding: 2px;
+}
+.error {
+  color: red;
 }

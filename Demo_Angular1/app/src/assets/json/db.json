@@ -1,0 +1,91 @@
+{
+  "userdata": [
+    {
+      "id": 1,
+      "firstname": "sushil",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "1234567890",
+      "date": "2022-03-02",
+      "gender": "Male",
+      "department": "Angular"
+    },
+    {
+      "firstname": "sushil1",
+      "lastname": "harikar1",
+      "email": "kahoisha@gmail.com",
+      "number": "646436413446",
+      "date": "2022-02-18",
+      "gender": "Male",
+      "department": "Viewjs",
+      "id": 4
+    },
+    {
+      "firstname": "ver",
+      "lastname": "wew",
+      "email": "sam123@gamil.com",
+      "number": "1234567890",
+      "date": "2022-02-01",
+      "gender": "Male",
+      "departments": [],
+      "id": 5
+    },
+    {
+      "firstname": "sushicvuwdcvic",
+      "lastname": "harikar",
+      "email": "sam123@gamil.com",
+      "number": "asasasa",
+      "date": "2022-02-09",
+      "gender": "Male",
+      "departments": "",
+      "id": 6
+    },
+    {
+      "firstname": "hari",
+      "lastname": "harikar",
+      "email": "sam123@gamil.com",
+      "number": "646436413446",
+      "date": "2022-02-10",
+      "gender": "Male",
+      "departments": "2",
+      "id": 7
+    },
+    {
+      "firstname": "sushil1",
+      "lastname": "harikar1",
+      "email": "sam123@gamil.com",
+      "number": "1234567890",
+      "date": "2022-02-01",
+      "gender": "Male",
+      "departments": "2",
+      "id": 8
+    }
+  ],
+  "departments": [
+    {
+      "name": "UI",
+      "id": 1
+    },
+    {
+      "name": "Angular",
+      "id": 2
+    },
+    {
+      "name": "viewjs",
+      "id": 3
+    }
+  ],
+  "resumedata": [
+    {
+      "name": "Abhishek",
+      "designation": "ceo",
+      "email": "kahoisha@gmail.com",
+      "mobileno": "7965622255",
+      "profile": "adkmkmdlmal",
+      "skills": [],
+      "technical": [],
+      "experience": [],
+      "id": 1
+    }
+  ]
+}

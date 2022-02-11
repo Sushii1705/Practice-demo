@@ -6,20 +6,19 @@ import { Resumedata } from '../../resumemodel/resume.model';
 @Component({
   selector: 'app-resume-view',
   templateUrl: './resume-view.component.html',
-  styleUrls: ['./resume-view.component.css']
+  styleUrls: ['./resume-view.component.css'],
 })
 export class ResumeViewComponent implements OnInit {
   resumedata: Resumedata;
 
-  constructor(private service : ResumeService) { }
+  constructor(private service: ResumeService) {}
 
   ngOnInit(): void {
     this.getdata();
   }
-  getdata(){
-    this.service.getresumedata().subscribe((res) => {
+  getdata() {
+    this.service.getresumedata(1).subscribe((res) => {
       this.resumedata = res;
-    })
+    });
   }
-
 }
