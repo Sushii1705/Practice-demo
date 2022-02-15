@@ -22,6 +22,8 @@ const routes: Routes = [
         (m) => m.ResumeBuilderModule
       ),
   },
+  { path: 'users', 
+  loadChildren: () => import('./assesment/users/users.module').then(m => m.UsersModule) },
 ];
 
 @NgModule({

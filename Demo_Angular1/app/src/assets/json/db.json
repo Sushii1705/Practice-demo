@@ -77,15 +77,63 @@
   ],
   "resumedata": [
     {
-      "name": "Abhishek",
-      "designation": "ceo",
-      "email": "kahoisha@gmail.com",
-      "mobileno": "7965622255",
-      "profile": "adkmkmdlmal",
-      "skills": [],
+      "name": "Sushil",
+      "designation": "wgeg",
+      "email": "sushil@123gmail.com",
+      "mobileno": "9724677566",
+      "profile": "fafqafd",
+      "skills": [
+        {
+          "skill": ""
+        }
+      ],
       "technical": [],
       "experience": [],
       "id": 1
+    }
+  ],
+  "usersdata": [
+    {
+      "id": 2,
+      "name": "sushil",
+      "email": "sushil@123gmail.com",
+      "mobile": "9724677566",
+      "department": "0"
+    },
+    {
+      "id": 3,
+      "name": "sushil hariakar",
+      "email": "sushil@123gmail.com",
+      "mobile": "9724677566",
+      "department": "0"
+    },
+    {
+      "name": "sushil",
+      "email": "sushil@123gmail.com",
+      "mobile": "9724677566",
+      "department": "",
+      "id": 4
+    },
+    {
+      "name": "viral patel",
+      "email": "sushil@123gmail.com",
+      "mobile": "9724677566",
+      "department": "",
+      "id": 5
+    }
+  ],
+  "departmentlist": [
+    {
+      "name": "devloper",
+      "id": 1
+    },
+    {
+      "name": "tester",
+      "id": 2
+    },
+    {
+      "name": "designer",
+      "id": 3
     }
   ]
 }

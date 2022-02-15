@@ -1,0 +1,78 @@
+<!-- form section start-->
+<section class="form-section">
+    <form class="form-content" [formGroup]="usersform" (ngSubmit)="onadd()">
+        <fieldset class="form-area">
+            <div>
+                <label for="name">Name</label>
+                <div>
+                    <input type="text" formControlName="name">
+                    <div class="error"
+                        *ngIf="getvalue['name'].dirty || getvalue['name'].touched && getvalue['name'].invalid">
+                        <div *ngIf="getvalue['name'].errors && getvalue['name'].errors['required']">Name
+                            Required</div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <div>
+                    <input type="text" formControlName="email">
+                    <div class="error"
+                        *ngIf="getvalue['email'].dirty || getvalue['email'].touched && getvalue['email'].invalid">
+                        <div *ngIf="getvalue['email'].errors && getvalue['email'].errors['required']">email
+                            Required</div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="mobile">Mobile</label>
+                <div>
+                    <input type="text" formControlName="mobile">
+                    <div class="error"
+                        *ngIf="getvalue['mobile'].dirty || getvalue['mobile'].touched && getvalue['mobile'].invalid">
+                        <div *ngIf="getvalue['mobile'].errors && getvalue['mobile'].errors['required']">mobile
+                            Required</div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="city">City</label>
+                <div>
+                    <input type="text">
+                </div>
+            </div>
+            <div>
+                <input type="radio">
+                <label for="male">Male</label>
+                <input type="radio">
+                <label for="female">Female</label>
+                <input type="radio">
+                <label for="other">Other</label>
+            </div>
+            <div>
+                <label for="department">Department</label>
+                <div>
+                    <select id="department" formControlName="department">
+                        <option value="0">select</option>
+                        <option *ngFor="let department of usersdepart;let i=index" [value]="i">{{department.name}}</option>
+                    </select>
+                </div>
+                <label for="hiredate">HireDate</label>
+                <input type="date">
+            </div>
+            <div>
+                <input type="checkbox">
+                <label for="permenent">permenent employee</label>
+            </div>
+            <div>
+                <button type="submit">Add</button>
+                <button type="button" (click)="onclear()">Clear</button>
+            </div>
+
+
+        </fieldset>
+    </form>
+</section>

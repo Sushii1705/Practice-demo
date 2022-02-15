@@ -1,0 +1,62 @@
+<div class="list-header">
+  <h1>Users List</h1>
+</div>
+<div class="list-search">
+  <button (click)="oncreate()">+create</button>
+  <input type="text" placeholder="search by name" />
+  <input type="text" placeholder="search by city" />
+  <input type="text" placeholder="search by department" />
+</div>
+
+<!-- users-list start -->
+<div class="section-list">
+  <table id="table1">
+    <thead>
+      <tr>
+        <th>FullName</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Department</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usersdata">
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.mobile }}</td>
+        <td>{{ item.department | json }}</td>
+        <td>
+          <button class="edit" type="button" (click)="editusers(item.id)"> Edit </button>
+       
+          <button
+            class="delete"
+            type="button"
+            (click)="deleteusers(item.id)"
+          >
+            Delete
+          </button>
+       
+          <button class="detail" type="button">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- users-list end -->
+<!-- <div>
+<div formArrayName ="address" *ngFor="let m of formarrayfunc('address').controls, let i=index">
+   <div [formGroupName]="i">
+
+       
+   </div>
+</div>
+
+<button type="button" (click)="addaddress()"> Add </button> -->
+<!-- </div>
+<div>
+    <label for="address">Address</label>
+    <div>
+        <input type="text" id="address" formControlName="address">
+    </div>
+    <button type="button">Add</button> -->
