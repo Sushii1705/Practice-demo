@@ -1,7 +1,11 @@
+.container {
+    width: 100%;
+    margin: auto;
+}
 table {
     border-collapse: collapse;
     border: 1px solid black;
-    width: 1000px;
+    width: 70%;
     height: 300px;
     background-color: #ebe6e6;
 }
@@ -27,6 +31,7 @@ table {
 .section-list {
     display: flex;
     justify-content: center;
+    padding-bottom:4rem;
     
 }
 
@@ -34,7 +39,7 @@ table {
 .list-search {
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 70%;
     margin: auto;
     padding: 2rem 0;
 }
@@ -65,4 +70,26 @@ button{
     border: transparent;
     border-radius: 10%;
     margin: 0 5px;
+}
+.address-list {
+    display: flex;
+    /* justify-content: center; */
+    border: 1px solid black;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+    padding: 4rem 0rem;
+}
+
+.btn-delete{
+    background-color: red;
+}
+
+.btn-add {
+    background-color: #a0a6ab
+}
+.address-field {
+    width: 389px;
+    padding: 8px;
+    margin-left: 35px;
 }

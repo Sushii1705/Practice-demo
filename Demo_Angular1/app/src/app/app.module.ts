@@ -8,10 +8,13 @@ import { CoreModule } from './core/core.module';
 import { UserModule } from './modules/user/user.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersModule } from './assesment/users/users.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+   
 
   ],
   imports: [
@@ -20,7 +23,9 @@ import { UsersModule } from './assesment/users/users.module';
     CoreModule,
     UserModule,
     UsersModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+  
     
   ],
   providers: [],

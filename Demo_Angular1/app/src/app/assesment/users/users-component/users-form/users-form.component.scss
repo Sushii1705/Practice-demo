@@ -1,0 +1,71 @@
+.container {
+    width: 70%;
+    margin: auto;
+    
+}
+.form-content {
+    width: 100%;
+    padding-top: 6rem;
+}
+.form-area {
+    /* padding: 0 10rem; */
+    height: 700px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #f3f3f3;
+    /* align-items: center; */
+    /* padding: 0 4rem 23rem 0; */
+    // padding-left: 23rem;
+    // padding-bottom: 4rem;
+    // padding-top: 3rem;
+}
+h3 {
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+.form-input  {
+    width: 450px;
+    padding: 7px 0px;
+}
+
+select {
+    padding: 5px 50px;
+    width: 210px;
+}
+.label  {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+
+}
+.label input {
+    width: 225px;
+}
+.hiredate {
+    padding: 1px 10px;
+    font-size: 16px;
+}
+.input-field {
+    width: 38%;
+}
+button {
+    padding: 10px;
+    // color: white;
+    border: transparent;
+    border-radius: 10%;
+    margin: 0 5px;
+}
+
+.btn-add {
+    border: 1px solid #90bcfe;
+    color: #90bcfe;
+}
+.btn-clear {
+    border: 1px solid red;
+    color: red;
+}

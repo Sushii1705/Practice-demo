@@ -1,15 +1,14 @@
-import { EmailValidator } from "@angular/forms";
+import { EmailValidator } from '@angular/forms';
 
 export interface usersdata {
-
-id:number,
-name:string,
-email:EmailValidator,
-mobile:number,
-department:number
+  id: number;
+  name: string;
+  email: string;
+  mobile: number;
+  department: number;
 }
 
-export interface departmentlist{
-    id:number,
-    name:string
+
+export interface address {
+  address: string;
 }

@@ -9,7 +9,11 @@ import { DepartPipe } from './depart.pipe';
     DepartPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
+  ],
+  exports:[
+    DepartPipe,
   ]
 })
 export class ShareModule { }

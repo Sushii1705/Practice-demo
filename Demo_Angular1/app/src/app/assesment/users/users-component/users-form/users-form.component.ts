@@ -8,7 +8,7 @@ import { UsersService } from '../../service/users.service';
 @Component({
   selector: 'app-users-form',
   templateUrl: './users-form.component.html',
-  styleUrls: ['./users-form.component.css']
+  styleUrls: ['./users-form.component.scss']
 })
 export class UsersFormComponent implements OnInit {
   usersform = {} as FormGroup;
@@ -26,6 +26,7 @@ export class UsersFormComponent implements OnInit {
   ngOnInit(): void {
     this.usersform =  this.createform();
     this.createform();
+    this.getdepartmentlist()
     this.userstoedit= this.activeRoute.snapshot.params['id'];
     if(this.userstoedit){
       this.getusersById(this.userstoedit)
@@ -86,6 +87,8 @@ export class UsersFormComponent implements OnInit {
 
   getdepartmentlist(){
     this.usersservice.getdepartlist().subscribe((res) => {
+      console.log(res);
+      
       this.usersdepart = res;
     })
   }

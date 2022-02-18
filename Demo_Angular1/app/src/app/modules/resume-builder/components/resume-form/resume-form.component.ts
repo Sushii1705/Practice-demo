@@ -8,7 +8,7 @@ import { Resumedata } from '../../resumemodel/resume.model';
 @Component({
   selector: 'app-resume-form',
   templateUrl: './resume-form.component.html',
-  styleUrls: ['./resume-form.component.css'],
+  styleUrls: ['./resume-form.component.scss'],
 })
 export class ResumeFormComponent implements OnInit {
   // skills:FormArray;

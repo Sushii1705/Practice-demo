@@ -6,7 +6,7 @@ import { Resumedata } from '../../resumemodel/resume.model';
 @Component({
   selector: 'app-resume-view',
   templateUrl: './resume-view.component.html',
-  styleUrls: ['./resume-view.component.css'],
+  styleUrls: ['./resume-view.component.scss'],
 })
 export class ResumeViewComponent implements OnInit {
   resumedata: Resumedata;

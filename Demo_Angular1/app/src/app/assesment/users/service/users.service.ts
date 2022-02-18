@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Department } from 'src/app/modules/user/models/user.model';
 import { environment } from 'src/environments/environment';
-import { departmentlist, usersdata } from '../model/users.model';
+import { usersdata } from '../model/users.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,8 +30,8 @@ export class UsersService {
     return this.http.delete<usersdata[]>(`${this.apilink}/usersdata/${id}`)
   }
 
-  getdepartlist(): Observable<departmentlist[]>{
-    return this.http.get<departmentlist[]>(`${this.apilink}/departmentlist`)
+  getdepartlist(): Observable<Department[]>{
+    return this.http.get<Department[]>(`${this.apilink}/departmentlist`)
 
   }
 }
