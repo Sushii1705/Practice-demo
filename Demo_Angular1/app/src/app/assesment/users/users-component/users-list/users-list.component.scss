@@ -1,12 +1,11 @@
-.container {
-    width: 100%;
-    margin: auto;
+.container{
+    padding: 50px 0;
+    border: 3px solid red;
 }
 table {
     border-collapse: collapse;
     border: 1px solid black;
     width: 70%;
-    height: 300px;
     background-color: #ebe6e6;
 }
 .list-header {
@@ -55,6 +54,7 @@ table {
 } */
 td {
     text-align: center;
+    padding: 10px 0;
 }
 thead tr {
     background-color: white;

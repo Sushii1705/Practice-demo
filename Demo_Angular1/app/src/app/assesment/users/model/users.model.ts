@@ -1,4 +1,4 @@
-import { EmailValidator } from '@angular/forms';
+
 
 export interface usersdata {
   id: number;
@@ -6,6 +6,7 @@ export interface usersdata {
   email: string;
   mobile: number;
   department: number;
+  city: string
 }
 
 

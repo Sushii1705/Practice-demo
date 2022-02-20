@@ -4,16 +4,12 @@
 }
 
 .sidenav {
-    width: 250px;
+    flex:0 0 250px;
     height: 100%;
     background-color: #ffffff;
 }
 
 .main {
     flex-grow: 1;
-    background-color: #f7f8fa;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #f3f3f3;
-    background-color: #f3f3f3;
+    overflow: auto;   
 }

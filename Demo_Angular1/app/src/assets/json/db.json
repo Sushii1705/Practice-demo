@@ -94,18 +94,11 @@
   ],
   "usersdata": [
     {
-      "name": "mahesh",
-      "email": "m@gmail.ocm",
-      "mobile": "8445456",
-      "department": "1",
-      "id": 8
-    },
-    {
-      "name": "suresh",
-      "email": "suresh@gmail.com",
+      "name": "viral",
+      "email": "viral@gmail.com",
       "mobile": "9724677566",
-      "department": "2",
-      "id": 9
+      "department": "1",
+      "id": 2
     }
   ],
   "departmentlist": [
