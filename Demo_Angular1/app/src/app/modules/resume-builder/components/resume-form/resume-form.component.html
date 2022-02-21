@@ -1,72 +1,78 @@
-<div class="header">
-    <h1>
-        RESUME BUILDER
-    </h1>
+<div class="wrapper">
+    
+   
+        <form class="form-content" [formGroup]="resumeform" (ngSubmit)="saveresumedata()">
+            <fieldset class="form-area">
+                <div class="header">
+                    <h1>
+                        RESUME BUILDER
+                    </h1>
+                
+                </div>
+                <div class="input-field">
+                    <label for="name">Name:</label>
+                    <input class="form-input" type="text" formControlName="name" id="name" placeholder="Enter Your Name">
+                    <div class="error"
+                        *ngIf="getvalue['name'].dirty || getvalue['name'].touched && getvalue['name'].invalid">
+                        <div *ngIf="getvalue['name'].errors && getvalue['name'].errors['required']">name Required</div>
+    
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="designation">Designation:</label>
+                    <input class="form-input" type="text" formControlName="designation" id="designation"
+                        placeholder="Enter current Designation">
+                    <div class="error"
+                        *ngIf="getvalue['designation'].dirty || getvalue['designation'].touched && getvalue['designation'].invalid">
+                        <div *ngIf="getvalue['designation'].errors && getvalue['designation'].errors['required']">
+                            designation Required</div>
+    
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email:</label>
+                    <input class="form-input" type="text" formControlName="email" id="email" placeholder="sushilhariakar@gmail.com">
+                </div>
+                <div class="input-field">
+                    <label for="mobileno">Mobile.No:</label>
+                    <input class="form-input" type="text" formControlName="mobileno" id="mobileno" placeholder="(XXX)(XXX)(XXXX)">
+                </div>
+                <div class="input-field">
+                    <label for="profile">Profile:</label>
+                    <input class="form-input" type="text" formControlName="profile" id="profile" placeholder="Enter Profile Details">
+                </div>
+    
+                <div class="input-field">
+                    <label for="skills"> Skills :- </label>
+    
+    
+                <div formArrayName="skills" *ngFor="let m of formarrayfunc('skills').controls, let i=index">
+                    <div [formGroupName]="i">
+                        <input class="form-input" type="text" id="skills" formControlName='skillname'>
+                        <button type="button" (click)="removeskills(i)"> Delete</button>
+                    </div>
+                </div>
+                <button type="button" (click)="addskills()"> Add </button>
+
+                </div>
+                
+                <div class="input-field">
+                    <label for="technical">Technical:</label>
+                    <input  class="form-input" type="text" id="technical">
+                    <button type="button">Add</button>
+                </div>
+                <div class="input-field">
+                    <label for="experience">Experience:</label>
+                    <input class="form-input" type="text" id="experience">
+                </div>
+                <div class="input-field">
+                    <label for="education">Education:</label>
+                    <input class="form-input" type="text" id="education">
+                </div>
+                <div> 
+                    <button class="btn-submit" type="submit">Submit </button>
+                </div>
+            </fieldset>
+        </form>
 
 </div>
-<section class="form-section">
-    <form class="form-content" [formGroup]="resumeform" (ngSubmit)="saveresumedata()">
-        <fieldset class="form-area">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" formControlName="name" id="name" placeholder="Enter Your Name">
-                <div class="error"
-                    *ngIf="getvalue['name'].dirty || getvalue['name'].touched && getvalue['name'].invalid">
-                    <div *ngIf="getvalue['name'].errors && getvalue['name'].errors['required']">name Required</div>
-
-                </div>
-            </div>
-            <div>
-                <label for="designation">Designation:</label>
-                <input type="text" formControlName="designation" id="designation"
-                    placeholder="Enter current Designation">
-                <div class="error"
-                    *ngIf="getvalue['designation'].dirty || getvalue['designation'].touched && getvalue['designation'].invalid">
-                    <div *ngIf="getvalue['designation'].errors && getvalue['designation'].errors['required']">
-                        designation Required</div>
-
-                </div>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="text" formControlName="email" id="email" placeholder="sushilhariakar@gmail.com">
-            </div>
-            <div>
-                <label for="mobileno">Mobile.No:</label>
-                <input type="text" formControlName="mobileno" id="mobileno" placeholder="(XXX)(XXX)(XXXX)">
-            </div>
-            <div>
-                <label for="profile">Profile:</label>
-                <input type="text" formControlName="profile" id="profile" placeholder="Enter Profile Details">
-            </div>
-
-
-            <label for="skills"> Skills :- </label>
-
-
-            <div formArrayName="skills" *ngFor="let m of formarrayfunc('skills').controls, let i=index">
-                <div [formGroupName]="i">
-                    <input type="text" id="skills" formControlName='skillname'>
-                    <button type="button" (click)="removeskills(i)"> Delete</button>
-                </div>
-            </div>
-            <button type="button" (click)="addskills()"> Add </button>
-            <div>
-                <label for="technical">Technical:</label>
-                <input type="text" id="technical">
-                <button type="button">Add</button>
-            </div>
-            <div>
-                <label for="experience">Experience:</label>
-                <input type="text" id="experience">
-            </div>
-            <div>
-                <label for="education">Education:</label>
-                <input type="text" id="education">
-            </div>
-            <div>
-                <button class="btn-btn-success" type="submit">Submit </button>
-            </div>
-        </fieldset>
-    </form>
-</section>

@@ -6,6 +6,7 @@ export interface usersdata {
   email: string;
   mobile: number;
   department: number;
+  city : string;
 }
 
 

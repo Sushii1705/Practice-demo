@@ -3,11 +3,11 @@
     height: 100%;
 }
 
-.sidenav {
-    width: 250px;
-    height: 100%;
-    background-color: #ffffff;
-}
+// .sidenav {
+//     width: 250px;
+//     height: 100%;
+//     background-color: #ffffff;
+// }
 
 .main {
     flex-grow: 1;
@@ -16,4 +16,5 @@
     justify-content: center;
     border: 1px solid #f3f3f3;
     background-color: #f3f3f3;
+   
 }

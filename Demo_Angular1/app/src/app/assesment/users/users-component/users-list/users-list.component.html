@@ -18,6 +18,7 @@
         <th>Email</th>
         <th>Mobile</th>
         <th>Department</th>
+        <th>City</th>
         <th>action</th>
       </tr>
     </thead>
@@ -27,6 +28,7 @@
         <td>{{ item.email }}</td>
         <td>{{ item.mobile }}</td>
         <td>{{ item.department |depart:departmentlists}}</td>
+        <td>{{ item.city }}</td>
         <td>
           <button class="edit" type="button" (click)="editusers(item.id)">
             Edit
