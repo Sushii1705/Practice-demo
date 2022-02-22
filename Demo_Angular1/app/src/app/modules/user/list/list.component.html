@@ -1,6 +1,11 @@
-<div class="users-list">
-    
-    <table>
+<div class="container">
+    {{userSearch}}
+    <div class="wrapper">
+        <div class="list-header">
+            <h1>User List</h1>
+          </div>
+    <div class="table-list">
+        <table>
         <thead>
             <tr>
                 <th>FirstName</th>
@@ -23,12 +28,15 @@
                 <td>{{item.number}}</td>
                 <td>{{item.gender}}</td>
                 <!-- <td>{{item.}}</td> -->
-                <!-- <td>{{item.departments | depart: departs}}</td> -->
+                <td>{{item.departments | depart:departmentlists}}</td>
                 <td>
-                    <button class="btn-btn-primary" type="button" (click)="editUser(item.id)">Edit</button>
-                    <button class="btn-btn-sucsses" type="button" (click)="deleteuser(item.id)">Delete</button>
+                    <button class="edit" type="button" (click)="editUser(item.id)">Edit</button>
+                    <button class="delete" type="button" (click)="deleteuser(item.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
     </table>
+    </div>
+    
+    </div>
 </div>

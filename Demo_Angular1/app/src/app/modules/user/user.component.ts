@@ -10,6 +10,7 @@ export class UserComponent implements OnInit {
 
   buttonchange: string='Add User'
   twist: boolean= false;
+  searchString:string ='';
 
   constructor(private router:Router) { }
 
@@ -19,7 +20,7 @@ export class UserComponent implements OnInit {
     // this.twist=!this.twist
     
     if(this.twist){
-      this.twist=false
+      this.twist=false;
       this.buttonchange = 'Add user'
       this.router.navigate(['/user/user-list'])
     }

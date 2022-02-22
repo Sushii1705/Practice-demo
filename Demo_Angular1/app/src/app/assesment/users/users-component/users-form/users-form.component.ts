@@ -45,7 +45,8 @@ export class UsersFormComponent implements OnInit {
       name:['',Validators.required],
       email:['',[Validators.email,Validators.required]],
       mobile:['',[Validators.min(10),Validators.required]],
-      department:['']
+      department:[''],
+      city : ['']
     })
   }
   addaddress(){

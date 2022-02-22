@@ -1,6 +1,7 @@
 <div class="user-btn">
-    <input class="search-btn" type="text" placeholder="Search">
+  <input *ngIf="!twist" class="search-btn" type="text" placeholder="Search" [(ngModel)]="searchString">
+  <button (click)="changebutton()">{{ buttonchange }}</button>
 
-    <button (click)="changebutton()">{{buttonchange}}</button>
 </div>
-<router-outlet></router-outlet>
+<app-list *ngIf="!twist" [userSearch] ="searchString"></app-list>
+<app-form *ngIf="twist"></app-form>

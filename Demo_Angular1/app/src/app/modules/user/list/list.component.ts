@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { userdata } from '../models/user.model';
+import { Department, userdata } from '../models/user.model';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -10,10 +10,13 @@ import { UserService } from '../services/user.service';
 })
 export class ListComponent implements OnInit {
   userdata: userdata[] = [];
+  departmentlists:Department[]=[];
+  @Input() userSearch:string;
   constructor(private service: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.getData();   
+    this.getdeptdata();
   }
   getData() {
     this.service.getuserlist().subscribe((res: userdata[]) => {
@@ -32,6 +35,9 @@ export class ListComponent implements OnInit {
     });
   }
   getdeptdata(){
+    this.service.getdepartmentlist().subscribe((res) => {
+      this.departmentlists=res;
+    })
     
   }
 }

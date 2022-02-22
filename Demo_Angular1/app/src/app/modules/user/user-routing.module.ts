@@ -9,8 +9,7 @@ import { ListComponent } from './list/list.component';
 const routes: Routes = [
   { path :'', component: UserComponent,
   children:[
-        
-        {path :'', component:ListComponent},
+        {path :'',redirectTo:'user-list',pathMatch:'full'},
         {path :'user-form', component:FormComponent},
         {path :'user-list', component:ListComponent},
         {path :'edit/:id', component:FormComponent},

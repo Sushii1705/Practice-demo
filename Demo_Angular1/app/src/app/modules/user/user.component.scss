@@ -1,11 +1,19 @@
-.user-btn{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    
+.user-btn {
+  display: flex;
+  justify-content: end;
 }
-.search-btn {
-    padding: 2px 23px;
-    margin: 0px 10px;
+// .search-btn {
+//     padding: 2px 23px;
+//     margin: 0px 10px;
 
+// }
+
+button {
+  padding: 10px;
+  // color: white;
+  border: transparent;
+  border-radius: 10%;
+  margin: 0 5px;
+  border: 1px solid #90bcfe;
+  color: #90bcfe;
 }

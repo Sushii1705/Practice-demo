@@ -1,46 +1,6 @@
 {
   "userdata": [
     {
-      "id": 1,
-      "firstname": "sushil",
-      "lastname": "harikar1",
-      "email": "kahoisha@gmail.com",
-      "number": "1234567890",
-      "date": "2022-03-02",
-      "gender": "Male",
-      "department": "Angular"
-    },
-    {
-      "firstname": "sushil1",
-      "lastname": "harikar1",
-      "email": "kahoisha@gmail.com",
-      "number": "646436413446",
-      "date": "2022-02-18",
-      "gender": "Male",
-      "department": "Viewjs",
-      "id": 4
-    },
-    {
-      "firstname": "ver",
-      "lastname": "wew",
-      "email": "sam123@gamil.com",
-      "number": "1234567890",
-      "date": "2022-02-01",
-      "gender": "Male",
-      "departments": [],
-      "id": 5
-    },
-    {
-      "firstname": "sushicvuwdcvic",
-      "lastname": "harikar",
-      "email": "sam123@gamil.com",
-      "number": "asasasa",
-      "date": "2022-02-09",
-      "gender": "Male",
-      "departments": "",
-      "id": 6
-    },
-    {
       "firstname": "hari",
       "lastname": "harikar",
       "email": "sam123@gamil.com",
@@ -77,11 +37,11 @@
   ],
   "resumedata": [
     {
-      "name": "Sushil",
-      "designation": "wgeg",
-      "email": "sushil@123gmail.com",
+      "name": "sushil ",
+      "designation": "developer",
+      "email": "sushilhariakar@gmail.com",
       "mobileno": "9724677566",
-      "profile": "fafqafd",
+      "profile": "nothing",
       "skills": [
         {
           "skill": ""
@@ -95,24 +55,25 @@
   "usersdata": [
     {
       "name": "viral",
-      "email": "viral@gmail.com",
+      "email": "veer@gmail.com",
       "mobile": "9724677566",
-      "department": "1",
+      "department": "2",
+      "city": "valsad",
       "id": 2
     }
   ],
   "departmentlist": [
     {
       "name": "devloper",
-      "id": 1
+      "id": 0
     },
     {
       "name": "tester",
-      "id": 2
+      "id": 1
     },
     {
       "name": "designer",
-      "id": 3
+      "id": 2
     }
   ],
   "address": []
