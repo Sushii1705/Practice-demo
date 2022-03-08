@@ -1,6 +1,7 @@
 .user-btn {
   display: flex;
   justify-content: end;
+  padding: 3rem;
 }
 // .search-btn {
 //     padding: 2px 23px;
@@ -16,4 +17,11 @@ button {
   margin: 0 5px;
   border: 1px solid #90bcfe;
   color: #90bcfe;
+}
+.user-list-search {
+  display: flex;
+  align-items: center;
+}
+input {
+  padding: 5px 10px;
 }

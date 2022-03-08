@@ -1,4 +1,5 @@
 <div class="container">
+    <button class="btn-clear" (click)="displayOverlay(0)">add</button>
     {{userSearch}}
     <div class="wrapper">
         <div class="list-header">
@@ -30,7 +31,7 @@
                 <!-- <td>{{item.}}</td> -->
                 <td>{{item.departments | depart:departmentlists}}</td>
                 <td>
-                    <button class="edit" type="button" (click)="editUser(item.id)">Edit</button>
+                    <button class="edit" type="button" (click)="displayOverlay(item.id)">Edit</button>
                     <button class="delete" type="button" (click)="deleteuser(item.id)">Delete</button>
                 </td>
             </tr>

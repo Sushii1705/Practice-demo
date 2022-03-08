@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'users', 
   loadChildren: () => import('./assesment/users/users.module').then(m => m.UsersModule) },
   { path: 'databinding', loadChildren: () => import('./databinding/databinding.module').then(m => m.DatabindingModule) },
+  { path: 'myform', loadChildren: () => import('./modules/myform/myform.module').then(m => m.MyformModule) },
 ];
 
 @NgModule({
