@@ -1,0 +1,6 @@
+
+<app-customer-form-presentation
+[customerData]="customerData$ | async"
+    (add)="addUser($event)"
+    (edit)="editUser($event)"
+></app-customer-form-presentation>

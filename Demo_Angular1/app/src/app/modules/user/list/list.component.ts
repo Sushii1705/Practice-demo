@@ -66,9 +66,9 @@ export class ListComponent implements OnInit {
     componentRef.instance.close.subscribe(() => {
       overlayRef.detach();
     });
-    overlayRef.backdropClick().subscribe(()=> {
-      overlayRef.detach();
-    })
+    // overlayRef.backdropClick().subscribe(()=> {
+    //   // overlayRef.detach();
+    // })
   }
 
 }

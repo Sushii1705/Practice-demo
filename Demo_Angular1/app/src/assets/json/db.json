@@ -96,5 +96,25 @@
       "id": 2
     }
   ],
+  "Customer": [
+    {
+      "name": "sjs",
+      "age": "12",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "name": "sushil",
+      "age": "12",
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "name": "sushil",
+      "age": "20",
+      "gender": "Male",
+      "id": 4
+    }
+  ],
   "address": []
 }
