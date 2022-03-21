@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { user } from '../model';
+import { SubjectService } from '../subject.service';
 
 @Component({
   selector: 'app-subject-form',
@@ -8,9 +9,11 @@ import { user } from '../model';
   styleUrls: ['./subject-form.component.scss']
 })
 export class SubjectFormComponent implements OnInit {
-  private fb: FormBuilder;
+  subjectForm:FormGroup;
+  
 
-  constructor() { }
+  
+  constructor(private fb: FormBuilder,private subservice:SubjectService) { }
   
   buildForm() {
     return this.fb.group({
@@ -21,10 +24,21 @@ export class SubjectFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.subjectForm = this.buildForm();
+    this.subservice.editData.subscribe(res => this.subjectForm.patchValue(res));
+    
   }
 
 
-  onSubmit(userform : FormGroup){
-    console.log(userform.value);
+  onSubmit(){
+    this.subservice.subject.next(this.subjectForm.value)
+    this.subjectForm.reset();
   }
+  editdata() {
+    
+  
+  }
+  // onPress() {
+  //   this.subservice.sub.next ('gghfhgjfjgfj');
+  // }
 }

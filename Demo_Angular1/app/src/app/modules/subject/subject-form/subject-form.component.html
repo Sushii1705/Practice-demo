@@ -5,7 +5,7 @@
         <h2 class="text-center">hello, world!</h2>
         <!-- <a (click)="onCancel()" class="text-decoration-none">&times;</a> -->
       </div>
-      <form #userForm>
+      <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" formControlName="name">
@@ -42,7 +42,7 @@
             </div>
           </div> -->
         </div>
-        <button type="submit" class="btn btn-primary me-2" (click)="onSubmit(userForm['value'])">Submit</button>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
         <button type="button" class="btn btn-secondary">Cancel</button>
       </form>
     </div>

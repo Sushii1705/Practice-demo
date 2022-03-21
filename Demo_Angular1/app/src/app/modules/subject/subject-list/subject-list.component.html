@@ -2,7 +2,7 @@
     <h2>List of Users</h2>
     <div class="d-flex justify-content-between">
       <!-- <input type="text" placeholder="Search User" [formControl]="search"> -->
-      <button class="btn btn-dark" routerLink="../add">+ Add</button>
+      <button class="btn btn-dark">+ Add</button>
     </div>
   </div>
   
@@ -17,15 +17,15 @@
       </tr>
     </thead>
     <tbody>
-      <!-- <tr class="align-middle" *ngFor="let item of userlist">
-        <td>{{ item.id }}</td>
+      <tr class="align-middle" *ngFor="let item of userlist,let i=index">
+        <td>{{ i+1}}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.age }}</td>
         <td>{{ item.gender }}</td>
         <td>
-          <button class="btn btn-primary me-2">Edit</button>
-          <button class="btn btn-danger">Delete</button>
+          <button class="btn btn-primary me-2" (click)="edituser(i)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteuser(i)">Delete</button>
         </td>
-      </tr> -->
+      </tr>
     </tbody>
   </table>

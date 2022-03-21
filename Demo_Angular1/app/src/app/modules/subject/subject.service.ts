@@ -6,12 +6,16 @@ import { user } from './model';
   providedIn: 'root'
 })
 export class SubjectService {
-  public subject = new Subject<user>();
+  public sub= new Subject<string>();
+  
+  public subject:Subject<user>;
+  public editData:Subject<user>;
 
-  constructor() { }
-  // for sending data
-  passdata(user:user) {
-    this.subject.next(user)
-
+  constructor() { 
+    this.subject = new Subject<user>();
+    this.editData=new Subject<user>();
   }
+  
+
+ 
 }

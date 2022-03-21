@@ -6,6 +6,7 @@ import { SubjectComponent } from './subject.component';
 import { SubjectFormComponent } from './subject-form/subject-form.component';
 import { SubjectListComponent } from './subject-list/subject-list.component';
 import { SubjectService } from './subject.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,9 @@ import { SubjectService } from './subject.service';
   ],
   imports: [
     CommonModule,
-    SubjectRoutingModule
+    SubjectRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [SubjectService]
 })

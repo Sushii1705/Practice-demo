@@ -1,5 +1,5 @@
 export class user {
-    public id: number;
+    public id?: number;
     public name: string;
     public age: string;
     public gender: string;
